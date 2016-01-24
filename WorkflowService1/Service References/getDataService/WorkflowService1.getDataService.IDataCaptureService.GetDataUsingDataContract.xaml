@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap2010 sads" x:Class="WorkflowService1.getDataService.Activities.GetDataUsingDataContract" this:GetDataUsingDataContract.EndpointConfigurationName="BasicHttpBinding_IService1"
+<Activity mc:Ignorable="sap2010 sads" x:Class="WorkflowService1.getDataService.Activities.GetDataUsingDataContract" this:GetDataUsingDataContract.EndpointConfigurationName="BasicHttpBinding_IDataCaptureService"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
@@ -17,7 +17,7 @@
       <x:Property.Attributes>
         <sc:DefaultValueAttribute>
           <x:Arguments>
-            <x:String>BasicHttpBinding_IService1</x:String>
+            <x:String>BasicHttpBinding_IDataCaptureService</x:String>
           </x:Arguments>
         </sc:DefaultValueAttribute>
       </x:Property.Attributes>
@@ -35,7 +35,7 @@
       <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID2</x:Reference>
     </Sequence.Variables>
-    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService1/GetDataUsingDataContract" OperationName="GetDataUsingDataContract" ServiceContractName="p:IService1">
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IDataCaptureService/GetDataUsingDataContract" OperationName="GetDataUsingDataContract" ServiceContractName="p:IDataCaptureService">
       <p1:Send.CorrelationInitializers>
         <p1:RequestReplyCorrelationInitializer>
           <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
@@ -56,12 +56,12 @@
         <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
       </p1:Send.EndpointConfigurationName>
     </p1:Send>
-    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse">
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IDataCaptureService/GetDataUsingDataContractResponse">
       <p1:ReceiveMessageContent>
         <OutArgument x:TypeArguments="wg:GetDataUsingDataContractResponse">
           <VariableReference x:TypeArguments="wg:GetDataUsingDataContractResponse">
             <VariableReference.Variable>
-              <Variable x:TypeArguments="wg:GetDataUsingDataContractResponse" x:Name="__ReferenceID1" Name="tempResult_250321fdbd114d8ea1b808e3e53d5b19" />
+              <Variable x:TypeArguments="wg:GetDataUsingDataContractResponse" x:Name="__ReferenceID1" Name="tempResult_f0eb5ce9be4f488b8438468e99ef5908" />
             </VariableReference.Variable>
           </VariableReference>
         </OutArgument>
@@ -72,9 +72,9 @@
         <OutArgument x:TypeArguments="wg:CompositeType">[GetDataUsingDataContractResult]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="wg:CompositeType">[tempResult_250321fdbd114d8ea1b808e3e53d5b19.GetDataUsingDataContractResult]</InArgument>
+        <InArgument x:TypeArguments="wg:CompositeType">[tempResult_f0eb5ce9be4f488b8438468e99ef5908.GetDataUsingDataContractResult]</InArgument>
       </Assign.Value>
     </Assign>
-    <sads:DebugSymbol.Symbol>d7wBYzpcdXNlcnNcdGhvbWFzXGRvY3VtZW50c1x2aXN1YWwgc3R1ZGlvIDIwMTVcUHJvamVjdHNcdGVzdFNlcnZpY2VcV29ya2Zsb3dTZXJ2aWNlMVxTZXJ2aWNlIFJlZmVyZW5jZXNcZ2V0RGF0YVNlcnZpY2VcV29ya2Zsb3dTZXJ2aWNlMS5nZXREYXRhU2VydmljZS5JU2VydmljZTEuR2V0RGF0YVVzaW5nRGF0YUNvbnRyYWN0LnhhbWwJIQNPDgIBASYFOg8CAQo7BUUXAgEHRgVNDgIBAjVKNbEBAgEMKw8vHwIBCz4LQh8CAQlLOEuEAQIBBUg5SFkCAQM=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d6UBQzpcVXNlcnNcVGhvbWFzXFNvdXJjZVxSZXBvc1xXQ0ZcV29ya2Zsb3dTZXJ2aWNlMVxTZXJ2aWNlIFJlZmVyZW5jZXNcZ2V0RGF0YVNlcnZpY2VcV29ya2Zsb3dTZXJ2aWNlMS5nZXREYXRhU2VydmljZS5JRGF0YUNhcHR1cmVTZXJ2aWNlLkdldERhdGFVc2luZ0RhdGFDb250cmFjdC54YW1sCSEDTw4CAQEmBToPAgEKOwVFFwIBB0YFTQ4CAQI1SjWxAQIBDCsPLx8CAQs+C0IfAgEJSzhLhAECAQVIOUhZAgED</sads:DebugSymbol.Symbol>
   </Sequence>
 </Activity>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap2010 sads" x:Class="WorkflowService1.getDataService.Activities.GetData" this:GetData.EndpointConfigurationName="BasicHttpBinding_IService1"
+<Activity mc:Ignorable="sap2010 sads" x:Class="WorkflowService1.getDataService.Activities.GetData" this:GetData.EndpointConfigurationName="BasicHttpBinding_IDataCaptureService"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
@@ -16,7 +16,7 @@
       <x:Property.Attributes>
         <sc:DefaultValueAttribute>
           <x:Arguments>
-            <x:String>BasicHttpBinding_IService1</x:String>
+            <x:String>BasicHttpBinding_IDataCaptureService</x:String>
           </x:Arguments>
         </sc:DefaultValueAttribute>
       </x:Property.Attributes>
@@ -34,7 +34,7 @@
       <x:Reference>__ReferenceID1</x:Reference>
       <x:Reference>__ReferenceID2</x:Reference>
     </Sequence.Variables>
-    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService1/GetData" OperationName="GetData" ServiceContractName="p:IService1">
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IDataCaptureService/GetData" OperationName="GetData" ServiceContractName="p:IDataCaptureService">
       <p1:Send.CorrelationInitializers>
         <p1:RequestReplyCorrelationInitializer>
           <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
@@ -55,12 +55,12 @@
         <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
       </p1:Send.EndpointConfigurationName>
     </p1:Send>
-    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService1/GetDataResponse">
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IDataCaptureService/GetDataResponse">
       <p1:ReceiveMessageContent>
         <OutArgument x:TypeArguments="wg1:GetDataResponse">
           <VariableReference x:TypeArguments="wg1:GetDataResponse">
             <VariableReference.Variable>
-              <Variable x:TypeArguments="wg1:GetDataResponse" x:Name="__ReferenceID1" Name="tempResult_42a6f36e8790400c89da7a9749d63e4c" />
+              <Variable x:TypeArguments="wg1:GetDataResponse" x:Name="__ReferenceID1" Name="tempResult_e3eb24193e3b46e69ef1ab4005bd7f5f" />
             </VariableReference.Variable>
           </VariableReference>
         </OutArgument>
@@ -71,9 +71,9 @@
         <OutArgument x:TypeArguments="x:String">[GetDataResult]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[tempResult_42a6f36e8790400c89da7a9749d63e4c.GetDataResult]</InArgument>
+        <InArgument x:TypeArguments="x:String">[tempResult_e3eb24193e3b46e69ef1ab4005bd7f5f.GetDataResult]</InArgument>
       </Assign.Value>
     </Assign>
-    <sads:DebugSymbol.Symbol>d6sBYzpcdXNlcnNcdGhvbWFzXGRvY3VtZW50c1x2aXN1YWwgc3R1ZGlvIDIwMTVcUHJvamVjdHNcdGVzdFNlcnZpY2VcV29ya2Zsb3dTZXJ2aWNlMVxTZXJ2aWNlIFJlZmVyZW5jZXNcZ2V0RGF0YVNlcnZpY2VcV29ya2Zsb3dTZXJ2aWNlMS5nZXREYXRhU2VydmljZS5JU2VydmljZTEuR2V0RGF0YS54YW1sCSADTg4CAQElBTkPAgEKOgVEFwIBB0UFTA4CAQI0OjSIAQIBDCoPLh8CAQs9C0EfAgEJSjBKawIBBUcxR0ACAQM=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d5QBQzpcVXNlcnNcVGhvbWFzXFNvdXJjZVxSZXBvc1xXQ0ZcV29ya2Zsb3dTZXJ2aWNlMVxTZXJ2aWNlIFJlZmVyZW5jZXNcZ2V0RGF0YVNlcnZpY2VcV29ya2Zsb3dTZXJ2aWNlMS5nZXREYXRhU2VydmljZS5JRGF0YUNhcHR1cmVTZXJ2aWNlLkdldERhdGEueGFtbAkgA04OAgEBJQU5DwIBCjoFRBcCAQdFBUwOAgECNDo0iAECAQwqDy4fAgELPQtBHwIBCUowSmsCAQVHMUdAAgED</sads:DebugSymbol.Symbol>
   </Sequence>
 </Activity>

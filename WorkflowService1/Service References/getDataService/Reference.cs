@@ -74,19 +74,19 @@ namespace WorkflowService1.getDataService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="getDataService.IService1")]
-    public interface IService1 {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="getDataService.IDataCaptureService")]
+    public interface IDataCaptureService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataCaptureService/GetData", ReplyAction="http://tempuri.org/IDataCaptureService/GetDataResponse")]
         WorkflowService1.getDataService.GetDataResponse GetData(WorkflowService1.getDataService.GetDataRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataCaptureService/GetData", ReplyAction="http://tempuri.org/IDataCaptureService/GetDataResponse")]
         System.Threading.Tasks.Task<WorkflowService1.getDataService.GetDataResponse> GetDataAsync(WorkflowService1.getDataService.GetDataRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataCaptureService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IDataCaptureService/GetDataUsingDataContractResponse")]
         WorkflowService1.getDataService.GetDataUsingDataContractResponse GetDataUsingDataContract(WorkflowService1.getDataService.GetDataUsingDataContractRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataCaptureService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IDataCaptureService/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<WorkflowService1.getDataService.GetDataUsingDataContractResponse> GetDataUsingDataContractAsync(WorkflowService1.getDataService.GetDataUsingDataContractRequest request);
     }
     

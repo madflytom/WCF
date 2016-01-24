@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:49718/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:49718/DataCaptureService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="79b7a42b-6bf1-4eb3-9123-5b7ee3b263a8" SourceId="1" SourceUrl="http://localhost:49718/Service1.svc?disco" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="c2caf74f-368d-48be-a582-550ad612f8ff" SourceId="1" SourceUrl="http://localhost:49718/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="2e5b9e77-a9a2-481b-9e60-e51ea1f5597f" SourceId="1" SourceUrl="http://localhost:49718/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="e68d8deb-e2a5-4e21-b624-662f3c455833" SourceId="1" SourceUrl="http://localhost:49718/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="24c6a148-12bc-49f4-9a39-cfaaf316726a" SourceId="1" SourceUrl="http://localhost:49718/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataCaptureService.xsd" MetadataType="Schema" ID="e403ce43-e5ea-4015-a66c-adf2f36d5063" SourceId="1" SourceUrl="http://localhost:49718/DataCaptureService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataCaptureService1.xsd" MetadataType="Schema" ID="2acc30cc-142d-4c95-84e2-d3322d95d279" SourceId="1" SourceUrl="http://localhost:49718/DataCaptureService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataCaptureService.disco" MetadataType="Disco" ID="1d29b5d4-ae5f-42b4-86e3-0f5ebe2c16e6" SourceId="1" SourceUrl="http://localhost:49718/DataCaptureService.svc?disco" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="99a5a2f3-bfba-457f-bc0a-2b7e1c9539a7" SourceId="1" SourceUrl="http://localhost:49718/DataCaptureService.svc?wsdl" />
+    <MetadataFile FileName="DataCaptureService2.xsd" MetadataType="Schema" ID="10456d72-41d9-4f9a-87a9-88c48a82821e" SourceId="1" SourceUrl="http://localhost:49718/DataCaptureService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

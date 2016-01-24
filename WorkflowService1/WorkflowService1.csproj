@@ -69,14 +69,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <None Include="Service References\getDataService\Service1.disco" />
     <None Include="Service References\getDataService\configuration91.svcinfo" />
     <None Include="Service References\getDataService\configuration.svcinfo" />
+    <None Include="Service References\getDataService\DataCaptureService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\getDataService\DataCaptureService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\getDataService\DataCaptureService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\getDataService\Reference.svcmap">
       <Generator>Xaml Activity Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\getDataService\endpointConfigurationNameResolver.svcinfo" />
+    <None Include="Service References\getDataService\Service11.wsdl" />
     <None Include="Service References\textModService\Service1.wsdl" />
     <None Include="Service References\textModService\TextModService.disco" />
     <None Include="Service References\textModService\configuration91.svcinfo" />
@@ -86,6 +95,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\textModService\endpointConfigurationNameResolver.svcinfo" />
+    <None Include="Service References\getDataService\DataCaptureService.disco" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -94,16 +104,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Service References\getDataService\Service1.wsdl" />
-    <None Include="Service References\getDataService\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\getDataService\Service11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\getDataService\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\textModService\TextModService.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -115,7 +115,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.xamlx">
+    <Content Include="Workflow.xamlx">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Content>
@@ -128,21 +128,21 @@
     <WCFMetadataStorage Include="Service References\textModService\" />
   </ItemGroup>
   <ItemGroup>
-    <XamlAppDef Include="Service References\getDataService\WorkflowService1.getDataService.IService1.GetData.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-      <SubType>Designer</SubType>
-    </XamlAppDef>
-  </ItemGroup>
-  <ItemGroup>
-    <XamlAppDef Include="Service References\getDataService\WorkflowService1.getDataService.IService1.GetDataUsingDataContract.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-      <SubType>Designer</SubType>
-    </XamlAppDef>
-  </ItemGroup>
-  <ItemGroup>
     <XamlAppDef Include="Service References\textModService\WorkflowService1.textModService.ITextModService.ChangeTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="Service References\getDataService\WorkflowService1.getDataService.IDataCaptureService.GetData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="Service References\getDataService\WorkflowService1.getDataService.IDataCaptureService.GetDataUsingDataContract.xaml">
       <Generator>MSBuild:Compile</Generator>
       <DependentUpon>Reference.svcmap</DependentUpon>
       <SubType>Designer</SubType>
