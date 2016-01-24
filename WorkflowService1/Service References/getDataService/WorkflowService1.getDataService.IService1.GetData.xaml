@@ -1,0 +1,79 @@
+<Activity mc:Ignorable="sap2010 sads" x:Class="WorkflowService1.getDataService.Activities.GetData" this:GetData.EndpointConfigurationName="BasicHttpBinding_IService1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.ComponentModel;assembly=System"
+ xmlns:this="clr-namespace:WorkflowService1.getDataService.Activities"
+ xmlns:wg="clr-namespace:WorkflowService1.getDataService;assembly=WorkflowService1, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+ xmlns:wg1="clr-namespace:WorkflowService1.getDataService;assembly=WorkflowService1"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EndpointConfigurationName" Type="x:String">
+      <x:Property.Attributes>
+        <sc:DefaultValueAttribute>
+          <x:Arguments>
+            <x:String>BasicHttpBinding_IService1</x:String>
+          </x:Arguments>
+        </sc:DefaultValueAttribute>
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="value" Type="InArgument(x:Int32)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="GetDataResult" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence>
+    <Sequence.Variables>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+    </Sequence.Variables>
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService1/GetData" OperationName="GetData" ServiceContractName="p:IService1">
+      <p1:Send.CorrelationInitializers>
+        <p1:RequestReplyCorrelationInitializer>
+          <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+            <InArgument x:TypeArguments="p1:CorrelationHandle">
+              <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue.Variable>
+                  <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                </VariableValue.Variable>
+              </VariableValue>
+            </InArgument>
+          </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+        </p1:RequestReplyCorrelationInitializer>
+      </p1:Send.CorrelationInitializers>
+      <p1:SendMessageContent>
+        <InArgument x:TypeArguments="wg1:GetDataRequest">[New WorkflowService1.getDataService.GetDataRequest() With { .value = value }]</InArgument>
+      </p1:SendMessageContent>
+      <p1:Send.EndpointConfigurationName>
+        <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+      </p1:Send.EndpointConfigurationName>
+    </p1:Send>
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService1/GetDataResponse">
+      <p1:ReceiveMessageContent>
+        <OutArgument x:TypeArguments="wg1:GetDataResponse">
+          <VariableReference x:TypeArguments="wg1:GetDataResponse">
+            <VariableReference.Variable>
+              <Variable x:TypeArguments="wg1:GetDataResponse" x:Name="__ReferenceID1" Name="tempResult_42a6f36e8790400c89da7a9749d63e4c" />
+            </VariableReference.Variable>
+          </VariableReference>
+        </OutArgument>
+      </p1:ReceiveMessageContent>
+    </p1:ReceiveReply>
+    <Assign>
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[GetDataResult]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[tempResult_42a6f36e8790400c89da7a9749d63e4c.GetDataResult]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <sads:DebugSymbol.Symbol>d6sBYzpcdXNlcnNcdGhvbWFzXGRvY3VtZW50c1x2aXN1YWwgc3R1ZGlvIDIwMTVcUHJvamVjdHNcdGVzdFNlcnZpY2VcV29ya2Zsb3dTZXJ2aWNlMVxTZXJ2aWNlIFJlZmVyZW5jZXNcZ2V0RGF0YVNlcnZpY2VcV29ya2Zsb3dTZXJ2aWNlMS5nZXREYXRhU2VydmljZS5JU2VydmljZTEuR2V0RGF0YS54YW1sCSADTg4CAQElBTkPAgEKOgVEFwIBB0UFTA4CAQI0OjSIAQIBDCoPLh8CAQs9C0EfAgEJSjBKawIBBUcxR0ACAQM=</sads:DebugSymbol.Symbol>
+  </Sequence>
+</Activity>
